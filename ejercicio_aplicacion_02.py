@@ -7,6 +7,7 @@ class P(object):
         self.x, self.y = x, None
         self.xi, self.yi = self.x, None
         self.is_continous = False
+        self.domain = 15
         self.function_execute()
         self.y = self.yi
 
@@ -15,11 +16,11 @@ class P(object):
         self.function_component_2()
 
     def function_component_1(self):
-        if (self.xi >= 0 and self.xi <= 15):
+        if (self.xi >= 0 and self.xi <= self.domain):
             self.yi = self.xi/3
 
     def function_component_2(self):
-        if (self.xi > 15):
+        if (self.xi > self.domain):
             self.yi = (2*self.xi)/(0.2*self.xi+3)
 
     def isContinous(self):
