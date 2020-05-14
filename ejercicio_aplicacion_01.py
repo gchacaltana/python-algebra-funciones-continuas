@@ -45,6 +45,7 @@ class G(object):
             self.is_continous = True
 
     def display(self):
+        print("Cuando x = {}".format(self.x))
         print("G(x) => G({}) = {}".format(self.x, self.y))
         print("La funcion G {} es continua cuando x = {}".format('SI' if self.is_continous else 'No', self.x))
 
