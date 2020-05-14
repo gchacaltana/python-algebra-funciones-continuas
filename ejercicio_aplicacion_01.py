@@ -48,13 +48,14 @@ class G(object):
             self.is_continous = True
 
     def display(self):
-        print("Cuando x = {}".format(self.x))
+        print("\nCuando x = {}".format(self.x))
         print("G(x) => G({}) = {}".format(self.x, self.y))
-        print("La funcion G {} es continua cuando x = {}".format('SI' if self.is_continous else 'No', self.x))
+        print("\nLa funcion G {} es continua cuando x = {}".format('SI' if self.is_continous else 'No', self.x))
 
     def displayCoordinates(self, interval):
         ini = self.x - interval
         end = self.x + interval
+        print("\nMostrando G(x) para el rango de x de {} a {}\n".format(ini,end))
         for n in range(ini,end):
             self.xi = n
             self.function_execute()
