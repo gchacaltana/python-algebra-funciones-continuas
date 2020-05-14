@@ -7,9 +7,12 @@ class G(object):
         self.x, self.y = x, None
         self.xi, self.yi = self.x, None
         self.is_continous = False
+        self.function_execute()
+        self.y = self.yi
+
+    def function_execute(self):
         self.function_component_1()
         self.function_component_2()
-        self.y = self.yi
 
     def function_component_1(self):
         if (self.xi >= 0 and self.xi <= 100):
@@ -49,8 +52,16 @@ class G(object):
         print("G(x) => G({}) = {}".format(self.x, self.y))
         print("La funcion G {} es continua cuando x = {}".format('SI' if self.is_continous else 'No', self.x))
 
+    def displayCoordinates(self, interval):
+        ini = self.x - interval
+        end = self.x + interval
+        for n in range(ini,end):
+            self.xi = n
+            self.function_execute()
+            print("x = {} => G({}) = {}".format(self.xi,self.xi,self.yi))
 
 if __name__ == '__main__':
     x = 100
     function = G(x)
     function.display()
+    function.displayCoordinates(5)
