@@ -27,7 +27,5 @@ if __name__ == '__main__':
     try:
         g = G('G', x)
         g.function.display()
-        g.function.validateContinous()
-        g.function.displayCoordinates(5)
     except (ValueError, FileNotFoundError, AttributeError, Exception) as ex:
         print(ex)
