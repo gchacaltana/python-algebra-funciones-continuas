@@ -3,7 +3,6 @@
 
 from Function import Function
 
-
 class P(object):
 
     def __init__(self, name, x):
@@ -25,11 +24,9 @@ class P(object):
 
 
 if __name__ == '__main__':
-    x = 15
     try:
+        x = int(input("Ingresa el valor de x: "))
         p = P('P', x)
         p.function.display()
-        p.function.validateContinous()
-        p.function.displayCoordinates(5)
     except (ValueError, FileNotFoundError, AttributeError, Exception) as ex:
         print(ex)
