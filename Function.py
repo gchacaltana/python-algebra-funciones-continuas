@@ -3,7 +3,6 @@
 __author__ = "Gonzalo Chacaltana"
 __version__ = 1.0
 import matplotlib.pyplot as plt
-import time
 
 class Function(object):
 
@@ -71,6 +70,7 @@ class Function(object):
         self.displayFunction()
         self.validateContinous()
         self.displayCoordinates(10)
+        self.displayGraphic()
 
     def displayFunction(self):
         print("\nCuando \033[93m x = {} \033[0m {} {}(x) = {}({}) = {}".format(
@@ -88,7 +88,6 @@ class Function(object):
             self.coor_y.append(self.yi)
             print("x = {} => {}({}) = {}".format(
                 self.xi, self.label_name, self.xi, self.yi))
-        self.displayGraphic()
 
     def displayGraphic(self):
         plt.style.use('classic')
