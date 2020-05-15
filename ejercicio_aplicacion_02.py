@@ -1,32 +1,34 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from Function import Function
+from LinearAlgebra.Function import Function
+from LinearAlgebra.ContinuousFunction import ContinuousFunction
+from LinearAlgebra.CartesianPlane import CartesianPlane
 
-class P(object):
+
+class P(Function):
 
     def __init__(self, name, x):
-        self.function = Function(name, x)
+        super(P, self).__init__(name, x)
+        self.x_min = 0
         self.execute()
-        self.function.validateYi()
+        self.validateYi()
 
     def execute(self):
-        self.function_component_1()
-        self.function_component_2()
-
-    def function_component_1(self):
-        if (self.function.xi >= 0 and self.function.xi <= 15):
-            self.function.yi = self.function.xi/3
-
-    def function_component_2(self):
-        if (self.function.xi > 15):
-            self.function.yi = (2*self.function.xi)/(0.2*self.function.xi+3)
+        if (self.xi >= 0 and self.xi <= 15):
+            self.yi = self.xi/3
+        elif (self.xi > 15):
+            self.yi = (2*self.xi)/(0.2*self.xi+3)
 
 
 if __name__ == '__main__':
     try:
-        x = int(input("Ingresa el valor de x: "))
+        x = int(input("Ingresa el valor de X: "))
         p = P('P', x)
-        p.function.display()
+        p.show()
+        fc = ContinuousFunction(p)
+        fc.validate()
+        cp = CartesianPlane(p, 50)
+        cp.show()
     except (ValueError, FileNotFoundError, AttributeError, Exception) as ex:
         print(ex)
