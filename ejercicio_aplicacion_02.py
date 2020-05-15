@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+__author__ = "Gonzalo Chacaltana"
+__version__ = 1.0
 from LinearAlgebra.Function import Function
 from LinearAlgebra.ContinuousFunction import ContinuousFunction
 from LinearAlgebra.CartesianPlane import CartesianPlane
