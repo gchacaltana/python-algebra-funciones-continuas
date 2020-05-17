@@ -24,7 +24,7 @@ class P(Function):
 
 if __name__ == '__main__':
     try:
-        x = int(input("Ingresa el valor de X: "))
+        x = int(input("Ingresa las horas de estudio: "))
         p = P('P', x)
         p.show()
         fc = ContinuousFunction(p)

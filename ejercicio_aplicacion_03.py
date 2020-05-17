@@ -24,7 +24,7 @@ class F(Function):
 
 if __name__ == '__main__':
     try:
-        x = int(input("Ingresa el valor de X: "))
+        x = int(input("\nIngresar cantidad de años: "))
         f = F('F', x)
         f.show()
         fc = ContinuousFunction(f)
