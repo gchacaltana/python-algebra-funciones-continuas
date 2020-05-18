@@ -36,6 +36,9 @@ if __name__ == '__main__':
 
         # Mostramos el gráfico de la función
         cp = CartesianPlane(f, 50)
-        cp.show()
+        title = "Gráfico de la Función {}(x)".format(f.name)
+        label_x = "Impresiones por minuto"
+        label_y = "Años"
+        cp.show(title, label_x, label_y)
     except (ValueError, FileNotFoundError, AttributeError, Exception) as ex:
         print(ex)
