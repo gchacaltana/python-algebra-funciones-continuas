@@ -10,6 +10,7 @@ class ContinuousFunction(object):
     def __init__(self, function:object):
         self.function = function
         self.is_continuous = False
+        self.limitdiff = 0.001
 
     def validate(self):
         print("\nValidar si la funcion {} es continua.".format(
@@ -25,8 +26,7 @@ class ContinuousFunction(object):
         self.calculateLimitRight()
 
     def calculateLimitLeft(self):
-        self.function.xi = self.function.x - 1
-        self.function.execute()
+        self.function.execute('-')
         self.function.yLimitLeft = self.function.yi
         print("{}{} {}(x) cuando x -> {} (-) {} {} {}(x) = {}\n".format(
             console.space(2), console.printLimitSymbol(),
@@ -37,8 +37,7 @@ class ContinuousFunction(object):
             self.function.yLimitLeft))
 
     def calculateLimitRight(self):
-        self.function.xi = self.function.x + 1
-        self.function.execute()
+        self.function.execute('+')
         self.function.yLimitRight = self.function.yi
         print("{}{} {}(x) cuando x -> {} (-) {} {} {}(x) = {}\n".format(
             console.space(2), console.printLimitSymbol(),
@@ -53,7 +52,7 @@ class ContinuousFunction(object):
             self.is_continuous = True
 
     def printResult(self):
-        message = 'SI' if self.is_continuous else 'No' + " es continua"
+        message = ('SI' if self.is_continuous else 'No') + " es continua"
         print("\nLa funcion {} {}, cuando {}".format(
             console.printFunctionName(self.function.name),
             console.highlight(message),
