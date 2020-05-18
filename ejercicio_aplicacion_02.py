@@ -15,11 +15,12 @@ class P(Function):
         self.execute()
         self.validateYi()
 
-    def execute(self):
-        if (self.xi >= 0 and self.xi <= 15):
+    def execute(self, limitTrend=None):
+        x = self.getX(limitTrend)
+        if (x >= 0 and x <= 15):
             self.yi = self.xi/3
-        elif (self.xi > 15):
-            self.yi = (2*self.xi)/(0.2*self.xi+3)
+        elif (x > 15):
+            self.yi = (2*self.xi)/((0.2*self.xi)+3)
 
 
 if __name__ == '__main__':
