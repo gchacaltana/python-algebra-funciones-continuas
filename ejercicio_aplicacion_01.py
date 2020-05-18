@@ -25,7 +25,7 @@ class G(Function):
 
 if __name__ == '__main__':
     try:
-        x = int(input("\nIngresa el valor de X: "))
+        x = int(input("\nIngrese el valor de sus ingresos mensuales en decenas: "))
         # Instanciamos la función G
         g = G('G', x)
         g.show()
@@ -33,10 +33,13 @@ if __name__ == '__main__':
         # Validamos si la función es continua
         fc = ContinuousFunction(g)
         fc.validate()
-        
+
         # Mostramos el gráfico de la función
         cp = CartesianPlane(g, 80)
-        cp.show()
+        title = "Gráfico de la Función {}(x)".format(g.name)
+        label_x = "Ingresos Mensuales (decenas de Euros)"
+        label_y = "Gasto en ocio"
+        cp.show(title, label_x, label_y)
 
     except (ValueError, FileNotFoundError, AttributeError, Exception) as ex:
         print(ex)
