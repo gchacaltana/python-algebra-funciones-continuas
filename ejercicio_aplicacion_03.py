@@ -15,20 +15,26 @@ class F(Function):
         self.execute()
         self.validateYi()
 
-    def execute(self):
-        if (self.xi >= 0 and self.xi <= 5):
+    def execute(self, limitTrend=None):
+        x = self.getX(limitTrend)
+        if (x >= 0 and x <= 5):
             self.yi = 15.5-(1.1*self.xi)
-        elif (self.xi > 5):
+        elif (x > 5):
             self.yi = ((5*self.xi) + 45)/(self.xi+2)
 
 
 if __name__ == '__main__':
     try:
         x = int(input("\nIngresar cantidad de años: "))
+        # Instanciamos la función F
         f = F('F', x)
         f.show()
+
+        # Validamos si la función es continua
         fc = ContinuousFunction(f)
         fc.validate()
+
+        # Mostramos el gráfico de la función
         cp = CartesianPlane(f, 50)
         cp.show()
     except (ValueError, FileNotFoundError, AttributeError, Exception) as ex:
