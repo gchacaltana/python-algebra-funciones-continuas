@@ -15,9 +15,9 @@ class CartesianPlane(object):
         self.window_width, self.window_height = 14, 8
         self.xLabel, self.yLabel, self.title = None, None, None
 
-    def show(self,title, label_x, label_y):
-        self.title =title
-        self.xLabel, self.yLabel = label_x, label_y 
+    def show(self, title, label_x, label_y):
+        self.title = title
+        self.xLabel, self.yLabel = label_x, label_y
         self.showCoordenates()
         self.showGraphic()
 
@@ -44,7 +44,8 @@ class CartesianPlane(object):
         plt.style.use('classic')
         fig = plt.figure(figsize=(self.window_width, self.window_height))
         axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
-        axes.plot(self.coor_x, self.coor_y, color='green', marker='o', linestyle='dashed',linewidth=1, markersize=8)
+        axes.plot(self.coor_x, self.coor_y, color='green',marker='o', linestyle='dashed', linewidth=1, markersize=8)
+        axes.grid()
         plt.ylabel(self.yLabel)
         plt.xlabel(self.xLabel)
         plt.title(self.title)
