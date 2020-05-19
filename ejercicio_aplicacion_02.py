@@ -15,11 +15,12 @@ class P(Function):
         self.execute()
         self.validateYi()
 
-    def execute(self):
-        if (self.xi >= 0 and self.xi <= 15):
+    def execute(self, limitTrend=None):
+        x = self.getX(limitTrend)
+        if (x >= 0 and x <= 15):
             self.yi = self.xi/3
-        elif (self.xi > 15):
-            self.yi = (2*self.xi)/(0.2*self.xi+3)
+        elif (x > 15):
+            self.yi = (2*self.xi)/((0.2*self.xi)+3)
 
 
 if __name__ == '__main__':
@@ -27,9 +28,16 @@ if __name__ == '__main__':
         x = int(input("Ingresa las horas de estudio: "))
         p = P('P', x)
         p.show()
+
+        # Validamos si la función es continua
         fc = ContinuousFunction(p)
         fc.validate()
+
+        # Mostramos el gráfico de la función
         cp = CartesianPlane(p, 50)
-        cp.show()
+        title = "Gráfico de la Función {}(x)".format(p.name)
+        label_x = "Horas de estudio"
+        label_y = "Nota de Examen"
+        cp.show(title, label_x, label_y)
     except (ValueError, FileNotFoundError, AttributeError, Exception) as ex:
         print(ex)
