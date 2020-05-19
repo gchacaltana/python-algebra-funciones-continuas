@@ -44,7 +44,7 @@ class CartesianPlane(object):
         plt.style.use('classic')
         fig = plt.figure(figsize=(self.window_width, self.window_height))
         axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
-        axes.plot(self.coor_x, self.coor_y)
+        axes.plot(self.coor_x, self.coor_y, color='green', marker='o', linestyle='dashed',linewidth=1, markersize=8)
         plt.ylabel(self.yLabel)
         plt.xlabel(self.xLabel)
         plt.title(self.title)
