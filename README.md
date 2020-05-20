@@ -1,8 +1,8 @@
 # Ejercicios de Aplicación
 
-### Ejercicio 1
+## Ejercicio 1
 
-En cierto colectivo de familias, el gasto mensual en ocio, G(x) en decenas de €, está relacionado con sus ingresos mensuales (x, en decenas de €), a través de la siguiente expresión:
+    En cierto colectivo de familias, el gasto mensual en ocio, G(x) en decenas de €, está relacionado con sus ingresos mensuales (x, en decenas de €), a través de la siguiente expresión
 
 $$
 G(x)=\begin{Bmatrix}
@@ -10,3 +10,5 @@ G(x)=\begin{Bmatrix}
 \frac{30x}{2x+2300} & si& 100 < x
 \end{Bmatrix}
 $$
+
+\mathcal{W}(A,f) = (T,\bar{f})
