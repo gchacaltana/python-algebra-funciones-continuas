@@ -39,9 +39,8 @@ En cierto colectivo de hogares se ha observado empíricamente que el gasto mensu
 ## Ejercicio 05
 
 Según cierta teoría médica el peligro de un virus se mide en función del tiempo que lleva en el organismo mediante la siguiente expresión (P(t) es el peligro para un tiempo de t minutos):
-$$
+
 ![equation_exercise_05](https://latex.codecogs.com/gif.latex?P%28t%29%3D%5Cbegin%7BBmatrix%7D%20t%5E%7B2%7D%20%26%20si%20%5C%3A%200%5Cleq%20t%5Cleq%205%5C%5C%20%5Cfrac%7B50t-62.5%7D%7B0.5t&plus;5%7D%20%26%20si%20%5C%3A5%3Ct%20%5Cend%7BBmatrix%7D)
-$$
 
 * Validar si P(t) es una función continua.
 * Graficar la función P(t), cuando t = 5.
