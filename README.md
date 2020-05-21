@@ -26,3 +26,12 @@ Cierta empresa de material fotográfico oferta una máquina que es capaz de reve
 
 * Validar si F(x) es una función continua.
 * Graficar la función F(x).
+
+## Ejercicio 04
+
+En cierto colectivo de hogares se ha observado empíricamente que el gasto mensual en alquiler de películas de vídeo —G(t) en decenas de EUROS— depende del tiempo dedicado mensualmente a ver TV — t, en horas— en los siguientes términos:
+
+![equation_exercise_04](https://latex.codecogs.com/gif.latex?G%28t%29%3D%5Cbegin%7BBmatrix%7D%200%20%26%20si%20%5C%3A%200%5Cleq%20t%3C%2020%5C%5C%200.1t%20%26%20si%20%5C%3A%2020%5Cleq%20t%3C%20100%5C%5C%20%5Cfrac%7B4t-1000%7D%7B2t&plus;100%7D%20%26%20si%20%5C%3A100%3Ct%20%5Cend%7BBmatrix%7D)
+
+* Validar si G(t) es una función continua.
+* Graficar la función G(t), cuando t = 20 y cuando t = 100.
