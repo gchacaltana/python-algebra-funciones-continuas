@@ -44,3 +44,12 @@ Según cierta teoría médica el peligro de un virus se mide en función del tie
 
 * Validar si P(t) es una función continua.
 * Graficar la función P(t), cuando t = 5.
+
+## Ejercicio 06
+
+Se ha investigado el tiempo (T, en minutos) que se tarda en realizar cierta prueba de atletismo en función del tiempo de entrenamiento de los deportistas (x, en días), obteniéndose que:
+
+![equation_exercise_06](https://latex.codecogs.com/gif.latex?T%28t%29%3D%5Cbegin%7BBmatrix%7D%20%5Cfrac%7B300%7D%7Bx&plus;3%7D%20%26%20si%20%5C%3A%200%5Cleq%20x%5Cleq%2030%5C%5C%5C%5C%20%5Cfrac%7B1.125%7D%7B%28x-5%29%28x-15%29%7D&plus;2%20%26%20si%20%5C%3A30%3Ct%20%5Cend%7BBmatrix%7D)
+
+* Validar si P(t) es una función continua.
+* Graficar la función P(t), cuando t = 5.
